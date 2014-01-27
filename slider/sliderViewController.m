@@ -26,4 +26,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)valueChanged:(id)sender {
+    
+    
+    [self.label setText:[NSString stringWithFormat:@"%d", (self.slider.value)]];
+    
+}
 @end
