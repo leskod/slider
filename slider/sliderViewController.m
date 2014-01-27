@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self.label setText:[NSString stringWithFormat:@"%f", self.slider.value]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,8 +30,12 @@
 
 - (IBAction)valueChanged:(id)sender {
     
+    NSLog(@"%f",(self.slider.value));
     
-    [self.label setText:[NSString stringWithFormat:@"%d", (self.slider.value)]];
+    //[self.label setText:[NSString stringWithFormat:@"%d", (self.valueChanged.value)]];
+    [self.label setText:[NSString stringWithFormat:@"%f", self.slider.value]];
     
+}
+- (IBAction)whatsMyName:(id)sender {
 }
 @end
